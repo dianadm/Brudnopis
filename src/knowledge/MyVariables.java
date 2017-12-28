@@ -13,10 +13,10 @@ public class MyVariables {
 		int abc_dj$;
 	}
 
-	/*
-	 * local variables - in scope from declaration to end of block
-	  * instance variables - in scope from declaration until object garbage collected
-	  * class variables - in scope from declaration until program ends
+	/**
+	 *  local variables - in scope from declaration to end of block
+	 * instance variables - in scope from declaration until object garbage collected
+	 * class variables - in scope from declaration until program ends
 	 */
 	public void myScope() {
 		int a = 0;
