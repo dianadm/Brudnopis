@@ -6,7 +6,9 @@ public class MyPrimitives {
 	short s = 2;
 	int i = 3;
 	long l = 4;
-	float f = 5f;
+	long zz = 2222222222222222l;
+	float f = 5;
+	float ff = 5.5f;
 	double d = 6.0;
 	char ch = 'a';
 

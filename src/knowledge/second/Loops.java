@@ -30,11 +30,39 @@ public class Loops {
             // infinite loop
             System.out.println("hello!!");
         }
+	}
 
+	public static void strangeFor2() {
+		int x = 0;
+		for(long y = 0, z = 4; x < 5 && y < 10; x++, y++) {
+			System.out.print(y + " ");
+		}
+		System.out.print(x);
+	}
+
+	public static void notCompilingFors() {
+/*
+		int x = 0;
+		for(long y = 0, x = 4; x < 5 && y < 10; x++, y++) { // DOES NOT COMPILE
+			System.out.print(x + " ");
+		}
+*/
+
+/*		for(long y = 0, int x = 4; x < 5 && y<10; x++, y++) { // DOES NOT COMPILE
+			System.out.print(x + " ");
+		}
+*/
+
+/*		for(long y = 0, x = 4; x < 5 && y < 10; x++, y++) {
+			System.out.print(y + " ");
+		}
+		System.out.print(x); // DOES NOT COMPILE
+*/
 	}
 
     public static void main(String[] args) {
         testSwitch(10);
         testWhile();
+		strangeFor2();
     }
 }
