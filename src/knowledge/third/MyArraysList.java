@@ -1,12 +1,16 @@
 package knowledge.third;
 
+import coffee.shop.WhiteCoffee;
+
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class MyArraysList {
 
     public void wrappers() {
         Boolean a = new Boolean(true);
-        Byte  b = new Byte((byte) 1);
+        Byte b = new Byte((byte) 1);
         Short c = new Short((short) 1);
         Integer d = new Integer(1);
         Long e = new Long(1);
@@ -17,7 +21,7 @@ public class MyArraysList {
 
     public void wrappersParser() {
         Boolean a = Boolean.valueOf("TRUE");
-        Byte  b = Byte.valueOf("2");
+        Byte b = Byte.valueOf("2");
         Short c = Short.valueOf("2");
         Integer d = Integer.valueOf("2");
         Long e = Long.valueOf("2");
@@ -28,16 +32,17 @@ public class MyArraysList {
 
     public void wrappersParser2() {
         boolean a = Boolean.parseBoolean("true");
-        byte  b = Byte.parseByte("2");
+        byte b = Byte.parseByte("2");
         short c = Short.parseShort("2");
         int d = Integer.parseInt("2");
         long e = Long.parseLong("2");
         float f = Float.parseFloat("2");
         double g = Double.parseDouble("2");
+        Long l = 11l;
 //        Character h  ---
     }
 
-    public static void main(String[] args) {
+    public static void listy() {
         ArrayList list1 = new ArrayList();
         ArrayList list2 = new ArrayList(10);
         ArrayList list3 = new ArrayList(list2);
@@ -66,5 +71,40 @@ public class MyArraysList {
         System.out.println(list2.contains("jeden"));
         list2.clear();
         System.out.println(list2.toString());
+    }
+
+    public static void coffee() {
+        WhiteCoffee c1 = new WhiteCoffee();
+        WhiteCoffee c2 = new WhiteCoffee();
+        List<WhiteCoffee> list = new ArrayList<>();
+        List<WhiteCoffee> list2 = new ArrayList<>();
+        list.add(c1);
+        list2.add(c2);
+        list.remove(c2); // it uses equals!
+        System.out.println(list.toString());
+
+        Object[] arr2 = list2.toArray();
+        System.out.println(Arrays.toString(arr2));
+        WhiteCoffee[] arr2_2 = list2.toArray(new WhiteCoffee[1]);
+        System.out.println(Arrays.toString(arr2_2));
+    }
+
+    public static void unsupported() {
+        String[] array = {"hawk", "robin"}; // [hawk, robin]
+        List<String> list = Arrays.asList(array); // returns fixed size list
+        System.out.println(list.toString());
+
+        list.set(1, "test"); // [hawk, test]
+        array[0] = "new"; // [new, test]
+        for (String b : array) System.out.print(b + " "); // new test
+//        list.remove(1); // throws UnsupportedOperation Exception
+//        list.add("aaaa"); // throws UnsupportedOperation Exception
+        System.out.println(list.toString());
+    }
+
+    public static void main(String[] args) {
+//        listy();
+//        coffee();
+        unsupported();
     }
 }
