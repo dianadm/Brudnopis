@@ -27,11 +27,25 @@ public class Lambdas {
         }
     }
 
+    public static void checkLama(Lama lama, String text) {
+        if (lama.checkIt(text)) {
+            System.out.println("Aha!");
+        }
+    }
+
     public static void main(String[] args) {
         WhiteCoffee coffee = new WhiteCoffee();
         show(coffee, c -> c.isMilk());
 
         List<WhiteCoffee> list = new ArrayList<>();
         list.removeIf(s -> s.isMilk());
+
+        checkLama(a -> a.equals("abc"), "abc");
     }
+}
+
+interface Lama {
+
+    boolean checkIt(String abc);
+
 }
