@@ -7,6 +7,7 @@ public class FinallyTester {
     }
 
     public static void main(String[] args) {
+        System.out.println("Start");
         try {
             test();
         }

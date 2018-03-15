@@ -14,7 +14,7 @@ public class MyVariables {
 	}
 
 	/**
-	 *  local variables - in scope from declaration to end of block
+	 * local variables - in scope from declaration to end of block
 	 * instance variables - in scope from declaration until object garbage collected
 	 * class variables - in scope from declaration until program ends
 	 */
