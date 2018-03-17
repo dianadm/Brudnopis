@@ -6,4 +6,9 @@ public class Jazz extends Dance {
         super(type); // super has to be the first statement
         this.classic = false;
     }
+
+    @Override
+    void count() {
+
+    }
 }

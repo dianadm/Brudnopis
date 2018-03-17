@@ -12,5 +12,13 @@ public class Dancer {
         // hiding methods
         Salsa.step();
         Cubana.step();
+
+        Rumba rumba = new Rumba();
+        Latino latino = new Rumba();
+//        latino.staticTest();
+//        rumba.staticTest(); static method may be invoke on containing interface only
+        Latino.staticTest();
+
+
     }
 }
