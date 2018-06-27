@@ -5,6 +5,7 @@ public class Finalizer {
 	/**
 	 * finalize call could run zero or one time
 	 */
+	@Override
 	protected void finalize() {
 		System.out.println("Calling finalize");
 	}

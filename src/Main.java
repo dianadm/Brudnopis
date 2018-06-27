@@ -18,6 +18,10 @@ public class Main {
 	static String name;
 
 	public static void main(String[] args) {
+
+		long a = 123456789;
+		long b = 9123456789l;
+
 		System.out.println(age);
 		System.out.println(h);
 		System.out.println(d);

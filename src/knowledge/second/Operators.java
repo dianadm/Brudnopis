@@ -47,8 +47,8 @@ public class Operators {
         int a = 10, b = 10;
         int b20 = a++ * 2;
         int b22 = ++b * 2;
-        System.out.println(b20);
-        System.out.println(b22);
+        System.out.println(b20); // Outputs 20
+        System.out.println(b22); // Outputs 22
     }
 
     public static void coumpaundAssigments() {
