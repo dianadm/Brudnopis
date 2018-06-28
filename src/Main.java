@@ -1,3 +1,7 @@
+import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
+
 public class Main {
 
 	/**
@@ -27,5 +31,10 @@ public class Main {
 		System.out.println(d);
 		System.out.println(res);
 		System.out.println(name);
+
+		BigDecimal n1 =  new BigDecimal("22.12");
+		Double n2 = 23.45;
+		BigDecimal n3 = n1.multiply(new BigDecimal(n2));
+		System.out.println(n3);
 	}
 }

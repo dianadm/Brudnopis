@@ -13,6 +13,18 @@ public class Loops {
 		}
 	}
 
+	public static void testSwitch2(int a) {
+		switch (a) {
+			default:
+				System.out.println("0");
+				break;
+			case 12:
+				System.out.println(1);
+				break;
+		}
+	}
+
+
 	public static void testWhile() {
 		int a = 10;
 		while (a > 5) {
@@ -61,8 +73,21 @@ public class Loops {
 	}
 
     public static void main(String[] args) {
-        testSwitch(10);
-        testWhile();
-		strangeFor2();
+//        testSwitch2(12);
+//        testWhile();
+//		strangeFor2();
+
+		if (true ^ true) {
+			System.out.println("true ^ true");
+		}
+		if (true ^ false) {
+			System.out.println("true ^ false");
+		}
+		if (false ^ true) {
+			System.out.println("f ^ t");
+		}
+		if (false ^ false) {
+			System.out.println("false ^ false");
+		}
     }
 }
