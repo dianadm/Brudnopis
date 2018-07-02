@@ -11,4 +11,8 @@ public abstract interface Latino {
     static void staticTest() {
         System.out.println("nananana");
     }
+
+    public default void method() {
+        System.out.println(c);
+    }
 }
