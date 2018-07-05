@@ -19,6 +19,6 @@ public class Dancer {
 //        rumba.staticTest(); static method may be invoke on containing interface only
         Latino.staticTest();
 
-
+        System.out.println(Latino.c);
     }
 }

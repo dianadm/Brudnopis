@@ -106,5 +106,9 @@ public class MyArraysList {
 //        listy();
 //        coffee();
         unsupported();
+        int s=10;
+
+        System.out.print(s%(-3));
+
     }
 }
