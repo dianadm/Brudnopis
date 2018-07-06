@@ -18,11 +18,16 @@ interface Balroom {
 public class BoringDance implements Standard, Balroom {
 
     public void playSomeMusic() {
-        System.out.println("...");
+        System.out.println("nanana");
     }
 
     @Override
     public String getName() {
         return null;
+    }
+
+    public static void main(String[] args) {
+        BoringDance boringDance = new BoringDance();
+        boringDance.playSomeMusic();
     }
 }

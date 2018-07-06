@@ -2,17 +2,19 @@ package knowledge.quinto;
 
 public class HipHop {
     public static void main(String[] args) {
-        Funk f = new Funk();
+/*        Funk f = new Funk();
         System.out.println(f.str);
         System.out.println(f.strNs);
         f.method();
         f.ns();
-        System.out.println("---");
+        System.out.println("---");*/
+
         Funk l = new Locking();
         System.out.println(l.str);
         System.out.println(l.strNs);
         l.method();
         l.ns();
+
     }
 }
 
