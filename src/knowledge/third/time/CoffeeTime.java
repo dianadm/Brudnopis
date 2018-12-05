@@ -2,6 +2,7 @@ package knowledge.third.time;
 
 import java.time.*;
 import java.time.temporal.TemporalUnit;
+import java.util.Date;
 
 public class CoffeeTime {
 
@@ -41,11 +42,30 @@ public class CoffeeTime {
         System.out.println(p);
     }
 
+    public static Date asDate(LocalDate localDate) {
+        return Date.from(localDate.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
+    }
+
+    public static Date asDate(LocalDateTime localDateTime) {
+        return Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+    }
+
+    public static LocalDate asLocalDate(Date date) {
+        return Instant.ofEpochMilli(date.getTime()).atZone(ZoneId.systemDefault()).toLocalDate();
+    }
+
+    public static LocalDateTime asLocalDateTime(Date date) {
+        return Instant.ofEpochMilli(date.getTime()).atZone(ZoneId.systemDefault()).toLocalDateTime();
+    }
+
     public static void main(String[] args) {
 
         hello();
         System.out.println();
         theSameAsHello();
+
+        LocalDate localDate = LocalDate.now();
+        System.out.println(asDate(localDate).toString());
     }
 }
 
