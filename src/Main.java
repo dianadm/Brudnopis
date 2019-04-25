@@ -36,5 +36,15 @@ public class Main {
 		Double n2 = 23.45;
 		BigDecimal n3 = n1.multiply(new BigDecimal(n2));
 		System.out.println(n3);
+
+        StringBuilder messageToSave = new StringBuilder("Niepoprawne pola: ");
+        messageToSave.append("aaa, bbb, vcc, ");
+        messageToSave.replace(messageToSave.lastIndexOf(","), messageToSave.length(), "");
+        System.out.println(messageToSave.toString());
+
+        String wbsCode = "1.2.3";
+        String[] parts = wbsCode.split("\\.");
+        String result = parts.length > 1 ? parts[1] : null;
+        System.out.println(result);
 	}
 }
