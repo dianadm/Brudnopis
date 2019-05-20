@@ -21,21 +21,20 @@ public class Main {
 	static boolean res;
 	static String name;
 
-	public static void main(String[] args) {
+	public static void test() {
+        long a = 123456789;
+        long b = 9123456789l;
 
-		long a = 123456789;
-		long b = 9123456789l;
+        System.out.println(age);
+        System.out.println(h);
+        System.out.println(d);
+        System.out.println(res);
+        System.out.println(name);
 
-		System.out.println(age);
-		System.out.println(h);
-		System.out.println(d);
-		System.out.println(res);
-		System.out.println(name);
-
-		BigDecimal n1 =  new BigDecimal("22.12");
-		Double n2 = 23.45;
-		BigDecimal n3 = n1.multiply(new BigDecimal(n2));
-		System.out.println(n3);
+        BigDecimal n1 =  new BigDecimal("22.12");
+        Double n2 = 23.45;
+        BigDecimal n3 = n1.multiply(new BigDecimal(n2));
+        System.out.println(n3);
 
         StringBuilder messageToSave = new StringBuilder("Niepoprawne pola: ");
         messageToSave.append("aaa, bbb, vcc, ");
@@ -46,5 +45,10 @@ public class Main {
         String[] parts = wbsCode.split("\\.");
         String result = parts.length > 1 ? parts[1] : null;
         System.out.println(result);
+    }
+
+	public static void main(String[] args) {
+
+
 	}
 }
