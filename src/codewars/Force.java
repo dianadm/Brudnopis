@@ -12,7 +12,7 @@ public class Force {
         kg(1000),
         g(1),
         mg(0.001),
-        μg(0.0000001),
+        μg(0.000001),
         lb(453.592);
         double factor;
 
@@ -25,7 +25,7 @@ public class Force {
         m(1),
         cm(0.01),
         mm(0.001),
-        μm(0.0000001),
+        μm(0.000001),
         ft(0.3048);
         double factor;
 
@@ -35,10 +35,10 @@ public class Force {
     }
 
     public static double solution(double[] arrVal, String[] arrUnit) {
-        double m1 = (arrUnit[0] == "kg") ? arrVal[0] : convertMass(arrVal[0], arrUnit[0]) / 1000.0; // mass in kg
-        double m2 = (arrUnit[1] == "kg") ? arrVal[1] : convertMass(arrVal[1], arrUnit[1]) / 1000.0;
+        double m1 = convertMass(arrVal[0], arrUnit[0]) * 0.001; // mass in kg
+        double m2 = convertMass(arrVal[1], arrUnit[1]) * 0.001;
         double r = convertDistance(arrVal[2], arrUnit[2]); // in m
-        return G * (m1 * m2) / (r * r);
+        return (G * m1 * m2) / Math.pow(r, 2);
     }
 
     private static double convertMass(double m, String unit) {
@@ -70,7 +70,7 @@ public class Force {
 //expected:<1.9603564434202502E-14> but was:<1.9603564434202497E-15>
 
 //        test(6.67e-12, new double[] {1000, 1000, 100}, new String[] {"g", "kg", "m"});
-//        test(6.67e-9, new double[] {1000, 1000, 100}, new String[] {"kg", "kg", "m"});
+        test(6.67e-9, new double[] {1000, 1000, 100}, new String[] {"kg", "kg", "m"});
 //        test(0.0000667, new double[] {1000, 1000, 100}, new String[] {"kg", "kg", "cm"});
 
         test(0, new double[]{8.736960711841411E13, 81545.77558497271, 1.0879127095411938E7}, new String[]{
