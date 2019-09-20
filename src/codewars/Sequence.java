@@ -46,6 +46,23 @@ public class Sequence {
         public int w = 0;
     }
 
+    public static int movie(int card, int ticket, double perc) {
+        double cardPrice = ticket * perc;
+        double ticketPrice = ticket;
+        double finalCardPrice = card + cardPrice;
+        double cp = cardPrice;
+        int count = 1;
+        while (finalCardPrice > ticketPrice) {
+            count++;
+            ticketPrice += ticket;
+            cardPrice = cardPrice * perc;
+            cp = cp + cardPrice;
+            finalCardPrice = Math.ceil(card + cp);
+        }
+        return count;
+    }
+//    System B : 500 + 15 * 0.90 + (15 * 0.90) * 0.90 + (15 * 0.90 * 0.90) * 0.90 ( = 536.5849999999999, no rounding for each ticket)
+
     public static void main(String[] args) {
 //        System.out.println(nthterm(14, 4, 7));
 
@@ -63,6 +80,11 @@ public class Sequence {
         String s1 = "test";
         dosht(s1);
         System.out.println(s1);
+        System.out.println("\n movie:");
+        System.out.println(movie(500, 15, 0.9));
+        System.out.println(movie(0,10,0.95));
+        System.out.println(movie(635308,11,0.73));
+
 
     }
 }
