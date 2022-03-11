@@ -2,10 +2,18 @@ package coffee.shop;
 
 import java.util.Objects;
 
-public class WhiteCoffee {
+public class WhiteCoffee implements Drink {
 
     private String name = "magic";
     private boolean milk = true;
+
+    public WhiteCoffee() {
+    }
+
+    public WhiteCoffee(String name, boolean milk) {
+        this.name = name;
+        this.milk = milk;
+    }
 
     public String getName() {
         return name;
