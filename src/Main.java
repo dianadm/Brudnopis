@@ -49,8 +49,24 @@ public class Main {
         System.out.println(result);
     }
 
+
+    public enum CoffeeType {
+        BLACK("no milk"),
+        WHITE("with milk");
+
+        String description;
+
+        CoffeeType(String desc) {
+            description = desc;
+        }
+    }
+
 	public static void main(String[] args) {
 
+        CoffeeType ct = null;
+        if (!CoffeeType.BLACK.name().equals(ct)) {
+            System.out.println("ok");
+        }
 
 	}
 }
