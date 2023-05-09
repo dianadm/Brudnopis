@@ -26,5 +26,28 @@ public class CandyBar {
         for (Chocolate c : list) {
             System.out.println(c.getName());
         }
+
+        Cookie cookie = new Cookie() {
+            @Override
+            public String getIngredients() {
+                return null;
+            }
+        };
+
+        Sweet sweet = new Sweet() {
+            @Override
+            public String getIngredients() {
+                return "sugar";
+            }
+
+            @Override
+            public String getCalories() {
+                return null;
+            }
+        };
+
+        System.out.println(cookie.getName());
+        System.out.println(sweet.getName());
+
     }
 }
