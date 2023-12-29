@@ -1,3 +1,4 @@
+import coffee.shop.CoffeeType;
 import coffee.shop.WhiteCoffee;
 
 import java.math.BigDecimal;
@@ -47,18 +48,6 @@ public class Main {
         String[] parts = wbsCode.split("\\.");
         String result = parts.length > 1 ? parts[1] : null;
         System.out.println(result);
-    }
-
-
-    public enum CoffeeType {
-        BLACK("no milk"),
-        WHITE("with milk");
-
-        String description;
-
-        CoffeeType(String desc) {
-            description = desc;
-        }
     }
 
 	public static void main(String[] args) {
